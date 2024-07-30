@@ -1,10 +1,8 @@
-const { getDB } = require('../config/db');
+const Flight = require('../models/Flight');
 
 const getAllFlights = async (req, res) => {
-  const db = getDB();
-
   try {
-    const flights = await db.collection('flights').find({}).toArray();
+    const flights = await Flight.find({});
     res.json(flights);
   } catch (err) {
     console.error(err);
@@ -13,14 +11,13 @@ const getAllFlights = async (req, res) => {
 };
 
 const getFlightById = async (req, res) => {
-  const db = getDB();
-
   const { flight_id } = req.body;
   if (!flight_id) {
     return res.status(400).json({ error: 'Flight ID is required' });
   }
+
   try {
-    const flight = await db.collection('flights').findOne({ flight_id });
+    const flight = await Flight.findOne({ flight_id });
     if (!flight) {
       return res.status(404).json({ error: 'Flight not found' });
     }
@@ -32,15 +29,13 @@ const getFlightById = async (req, res) => {
 };
 
 const getFlightByStatus = async (req, res) => {
-  const db = getDB();
-
   const { status } = req.body;
   if (!status) {
     return res.status(400).json({ error: 'Status is required' });
   }
 
   try {
-    const flight = await db.collection('flights').findOne({ status });
+    const flight = await Flight.findOne({ status });
 
     if (!flight) {
       return res.status(404).json({ error: 'Flight not found' });

@@ -42,7 +42,7 @@ const flightData = [
 const insertData = async () => {
   try {
     await mongoose.connect(process.env.MONGODB_URI);
-    const result = await Flight.insertMany([...flightData]);
+    await Flight.insertMany(flightData);
     mongoose.disconnect()
   } catch (error) {
     console.error(error);

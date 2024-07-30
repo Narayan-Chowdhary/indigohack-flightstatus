@@ -9,7 +9,7 @@ const flightSchema = new mongoose.Schema({
   scheduled_arrival: Date,
   actual_departure: Date,
   actual_arrival: Date,
-}, { timestamps: false }); // Ensure correct spelling and setting
+}, { timestamps: false }); 
 
 const Flight = mongoose.model('Flight', flightSchema);
 

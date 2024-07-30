@@ -40,7 +40,6 @@ const sendEmail = async (recipient, subject,filteredFlights ) => {
     to: recipient,
     subject: subject,
      html: compiledEmail,
-   // text: text,
   });
 };
 module.exports = { sendEmail };
