@@ -1,100 +1,93 @@
-# Project Title
-Indigo Flight Status
+# Indigo Flight Status
 
-# Description
+## Description
 
 This project aims to develop a system that provides real-time flight status updates and notifications to passengers. The system displays current flight status, including delays, cancellations, and gate changes, and sends notifications via email.
 
-
 ## Features
 
-* Real-time Updates: Display current flight status (delays, cancellations, gate changes).
-* Push Notifications: Send notifications for flight status changes via email.
-* Integration with Airport Systems: Pull data from airport databases for accurate information (using mock data).
+- **Real-time Updates**: Display current flight status (delays, cancellations, gate changes).
+- **Push Notifications**: Send notifications for flight status changes via email.
+- **Integration with Airport Systems**: Pull data from airport databases for accurate information (using mock data).
 
-## Features
+## Technologies Used
 
-### Technologies Used
-#### Frontend
-* React.js: A JavaScript library for building user interfaces.
-* Socket.io: A library for real-time, bidirectional and event-based communication.
-* TailwindCSS: A utility-first CSS framework for rapid UI development.
+### Frontend
 
-#### Backend
-* Node.js: A JavaScript runtime built on Chrome's V8 JavaScript engine.
-* Express.js: A web application framework for Node.js, designed for building web applications and APIs.
-* Socket.io: Used for real-time communication between the client and server.
-* NodeMailer: A module for Node.js applications to send email.
+- **React.js**: A JavaScript library for building user interfaces.
+- **Socket.io**: A library for real-time, bidirectional and event-based communication.
+- **TailwindCSS**: A utility-first CSS framework for rapid UI development.
 
+### Backend
 
+- **Node.js**: A JavaScript runtime built on Chrome's V8 JavaScript engine.
+- **Express.js**: A web application framework for Node.js, designed for building web applications and APIs.
+- **Socket.io**: Used for real-time communication between the client and server.
+- **NodeMailer**: A module for Node.js applications to send email.
 
-### Dependancies
+## Dependencies
 
-##### Backend
-* NodeJs Version :- v18.20.4;
-* MongoDB Version :- v3.6.8;
+### Backend
 
+- **Node.js Version**: v18.20.4
+- **MongoDB Version**: v3.6.8
 
-##### Frontend
-* ReactJs Version :- v18.3.1;
-* NodeJs Version :- v18.20.4;
+### Frontend
 
-* We have used Static data for the time being so please run this command to make program run 
+- **React.js Version**: v18.3.1
+- **Node.js Version**: v18.20.4
 
-### Executing program
+> **Note:** We have used static data for the time being. Please follow the instructions below to run the program.
 
-##### Backend
-* Take Clone from github :- 
-    * Branch-Name :- indigohack-backend;
-    * Use Command one by one in your terminal :-
+## Executing Program
+
+### Backend
+
+1. Clone the repository:
+    - Branch-Name: `indigohack-backend`
+    - Run the following commands in your terminal:
+       ```bash
+       git clone https://github.com/Narayan-Chowdhary/indigohack-flightstatus.git 
+       cd indigohack-flightstatus
+       git checkout indigohack-backend
+       git pull origin indigohack-backend
+       npm install 
        ```
-        git clone https://github.com/Narayan-Chowdhary/indigohack-flightstatus.git 
-        git checkout indigohack-backend
-        git pull origin indigohack-backend
-        npm install 
-        ```
 
-* Create .env file and add credetial in that
+2. Create a `.env` file and add credentials:
+    ```plaintext
+    MONGODB_URI="Your MongoDB URI"
+    PORT=5050 # or any port of your choice
+    SENDER_EMAIL="Your Gmail address"
+    SENDER_PASSWORD="Gmail password or app password"
+    RECIEVER_EMAIL="Email address to receive notifications"
     ```
-    MONGODB_URI = "Your MongoDB URI" 
-    PORT = 5050 || what ever of you choice
-    SENDER_EMAIL = "GMAIL address"
-    SENDER_PASSWORD =  "gmail Password || App Password || App passkey"
-    RECIEVER_EMAIL = "Mail address whome you wanted to mail"
-    ```
-* To start server run Commands
-    
-    ```
+
+3. To start the server, run the following commands:
+    ```bash
     node insertData.js
     node server.js
     ```
 
-##### Frontend
-* Take Clone from github :- 
-    * Branch-Name :- indigohack-frontend;
-    * Use Command one by one in your terminal :-
-        ```
+### Frontend
+
+1. Clone the repository:
+    - Branch-Name: `indigohack-frontend`
+    - Run the following commands in your terminal:
+        ```bash
         git clone https://github.com/Narayan-Chowdhary/indigohack-flightstatus.git 
+        cd indigohack-flightstatus
         git checkout indigohack-frontend
         git pull origin indigohack-frontend
         npm install 
         ```
-* NOTE :- Go to folder 
-         /src/utils/Services.jsx
-     * Write BASE_URL = 'http://localhost:YOUR_PORT_NAME';
 
-        
-* To start server run Command   
-    ```
+2. To start the server, run the following command:
+    ```bash
     npm start
     ```
 
-
-
 ## Authors
 
-    Narayan Chowdhary
-    narayan97.nk@gmail.com
-
-
-
+- Narayan Chowdhary
+  - [Email](mailto:narayan97.nk@gmail.com)
