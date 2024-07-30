@@ -1,6 +1,7 @@
-const { MongoClient } = require('mongodb');
+require('dotenv').config();
+const mongoose = require("mongoose")
+const Flight = require('../../models/Flight');
 const uri = process.env.MONGODB_URI ;
-const client = new MongoClient(uri);
 
 const flightData = [
   {
@@ -40,14 +41,13 @@ const flightData = [
 
 const insertData = async () => {
   try {
-    await client.connect();
-    const db = client.db('flightDB'); 
-    const result = await db.collection('flights').insertMany(flightData);
+    await mongoose.connect(process.env.MONGODB_URI);
+    const result = await Flight.insertMany([...flightData]);
+    mongoose.disconnect()
   } catch (error) {
     console.error(error);
-  } finally {
-    await client.close();
   }
 };
 
-insertData();
+insertData()
+

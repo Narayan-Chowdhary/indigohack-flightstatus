@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "seed": "node utils/seeder/seeder.js",
+    "dev": "node server.js"
   },
   "keywords": [],
   "author": "",
@@ -13,7 +15,9 @@
     "axios": "^1.7.2",
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",
+    "ejs": "^3.1.10",
     "express": "^4.19.2",
+    "handlebars": "^4.7.8",
     "mongodb": "^6.8.0",
     "mongoose": "^8.5.1",
     "nodemailer": "^6.9.14",

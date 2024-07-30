@@ -1,5 +1,4 @@
 const mongoose = require('mongoose');
-
 const flightSchema = new mongoose.Schema({
   flight_id: String,
   airline: String,
@@ -10,7 +9,7 @@ const flightSchema = new mongoose.Schema({
   scheduled_arrival: Date,
   actual_departure: Date,
   actual_arrival: Date,
-});
+}, { timestamps: false }); // Ensure correct spelling and setting
 
 const Flight = mongoose.model('Flight', flightSchema);
 
