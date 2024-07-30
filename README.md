@@ -48,7 +48,6 @@ This project aims to develop a system that provides real-time flight status upda
     - Run the following commands in your terminal:
        ```bash
        git clone https://github.com/Narayan-Chowdhary/indigohack-flightstatus.git 
-       cd indigohack-flightstatus
        git checkout indigohack-backend
        git pull origin indigohack-backend
        npm install 
@@ -76,7 +75,6 @@ This project aims to develop a system that provides real-time flight status upda
     - Run the following commands in your terminal:
         ```bash
         git clone https://github.com/Narayan-Chowdhary/indigohack-flightstatus.git 
-        cd indigohack-flightstatus
         git checkout indigohack-frontend
         git pull origin indigohack-frontend
         npm install 
