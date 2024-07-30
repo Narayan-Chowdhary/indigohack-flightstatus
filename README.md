@@ -64,8 +64,8 @@ This project aims to develop a system that provides real-time flight status upda
 
 3. To start the server, run the following commands:
     ```bash
-    node insertData.js
-    node server.js
+    npm run seed
+    npm run dev
     ```
 
 ### Frontend
