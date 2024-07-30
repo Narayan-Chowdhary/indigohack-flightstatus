@@ -1,16 +1,11 @@
 import { useState,useCallback } from "react"
-import { useNavigate } from "react-router-dom";
-import io from 'socket.io-client';
-import { BASE_URL } from "../../utils/Services";
- const socket = io(BASE_URL, { autoConnect: false });
 
 export default function SearchBar({setFlights, socketDataEmit}) {
-    const nav = useNavigate()
     const [search, setSearchText] = useState()
 
     const handleChange = (event) => {
         event.preventDefault();
-        setSearchText(event.target.value)
+        setSearchText(event?.target.value)
     }
 
     const handleSubmit = useCallback((event)=>{

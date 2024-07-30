@@ -1,13 +1,13 @@
 import { BASE_URL, endpoints } from "../Services"
 
 export async function getAllFlight(){
-        let allFlightResponse = await fetch(`${BASE_URL}${endpoints.getFlightDetails}`);
+        let allFlightResponse = await fetch(`${BASE_URL}${endpoints?.getFlightDetails}`);
         let responseJson = await allFlightResponse.json();
         return responseJson     
 }
 
 export async function searchFlightById(id){
-    const allFlightResponse = await fetch(`${BASE_URL}${endpoints.getFlightDetailsById}`, {
+    const allFlightResponse = await fetch(`${BASE_URL}${endpoints?.getFlightDetailsById}`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json", },
@@ -19,7 +19,7 @@ export async function searchFlightById(id){
 }
 
 export async function searchFlightByStatus(status){
-    const allFlightResponse = await fetch(`${BASE_URL}${endpoints.getFlightDetails}`, {
+    const allFlightResponse = await fetch(`${BASE_URL}${endpoints?.getFlightDetails}`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json", },

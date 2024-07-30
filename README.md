@@ -38,7 +38,7 @@ This project aims to develop a system that provides real-time flight status upda
 - **Node.js Version**: v18.20.4
 
 > **Note:** We have used static data for the time being. Please follow the instructions below to run the program.
-
+> **Note:** Take Pull in Two different folders one for frontend and other for backend.
 ## Executing Program
 
 ### Backend
@@ -82,7 +82,7 @@ This project aims to develop a system that provides real-time flight status upda
 
 2. To start the server, run the following command:
     ```bash
-    npm start
+    npm run dev
     ```
 
 ## Authors
