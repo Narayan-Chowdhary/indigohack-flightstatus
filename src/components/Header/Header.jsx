@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 export default function Header() {
     const nav = useNavigate();
     const [bgColor, setBgColor] = useState('');
-    const [menus, setMenus] = useState()
+    const [menus, setMenus] = useState("text-[#fff]")
 
     useEffect(() => {
         const handleScroll = () => {
