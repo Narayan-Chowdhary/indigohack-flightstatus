@@ -38,7 +38,7 @@ This project aims to develop a system that provides real-time flight status upda
 - **Node.js Version**: v18.20.4
 
 > **Note:** We have used static data for the time being, for real time update you can update anything in DataBase that will reflect on UI without refreshing the page. Please follow the instructions below to run the program.
-> **Note:** Take Pull in Two different folders one for frontend and other for backend.
+> **Note:** Take Pull in Two different folders one for frontend and other for backend & Take clone of Backend First then Frontend.
 ## Executing Program
 
 ### Backend
