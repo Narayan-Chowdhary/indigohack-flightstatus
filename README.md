@@ -79,6 +79,11 @@ This project aims to develop a system that provides real-time flight status upda
         git pull origin indigohack-frontend
         npm install 
         ```
+* NOTE :- Go to folder 
+         /src/utils/Services.jsx
+     * Write BASE_URL = 'http://localhost:YOUR_PORT_NAME';
+
+        
 * To start server run Command   
     ```
     npm start
