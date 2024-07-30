@@ -1,70 +1,95 @@
-# Getting Started with Create React App
+# Project Title
+Indigo Flight Status
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Description
 
-## Available Scripts
+This project aims to develop a system that provides real-time flight status updates and notifications to passengers. The system displays current flight status, including delays, cancellations, and gate changes, and sends notifications via email.
 
-In the project directory, you can run:
 
-### `npm start`
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+* Real-time Updates: Display current flight status (delays, cancellations, gate changes).
+* Push Notifications: Send notifications for flight status changes via email.
+* Integration with Airport Systems: Pull data from airport databases for accurate information (using mock data).
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Features
 
-### `npm test`
+### Technologies Used
+#### Frontend
+* React.js: A JavaScript library for building user interfaces.
+* Socket.io: A library for real-time, bidirectional and event-based communication.
+* TailwindCSS: A utility-first CSS framework for rapid UI development.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+#### Backend
+* Node.js: A JavaScript runtime built on Chrome's V8 JavaScript engine.
+* Express.js: A web application framework for Node.js, designed for building web applications and APIs.
+* Socket.io: Used for real-time communication between the client and server.
+* NodeMailer: A module for Node.js applications to send email.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Dependancies
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+##### Backend
+* NodeJs Version :- v18.20.4;
+* MongoDB Version :- v3.6.8;
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+##### Frontend
+* ReactJs Version :- v18.3.1;
+* NodeJs Version :- v18.20.4;
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+* We have used Static data for the time being so please run this command to make program run 
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Executing program
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+##### Backend
+* Take Clone from github :- 
+    * Branch-Name :- indigohack-backend;
+    * Use Command one by one in your terminal :-
+       ```
+        git clone https://github.com/Narayan-Chowdhary/indigohack-flightstatus.git 
+        git checkout indigohack-backend
+        git pull origin indigohack-backend
+        npm install 
+        ```
 
-## Learn More
+* Create .env file and add credetial in that
+    ```
+    MONGODB_URI = "Your MongoDB URI" 
+    PORT = 5050 || what ever of you choice
+    SENDER_EMAIL = "GMAIL address"
+    SENDER_PASSWORD =  "gmail Password || App Password || App passkey"
+    RECIEVER_EMAIL = "Mail address whome you wanted to mail"
+    ```
+* To start server run Commands
+    
+    ```
+    node insertData.js
+    node server.js
+    ```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+##### Frontend
+* Take Clone from github :- 
+    * Branch-Name :- indigohack-frontend;
+    * Use Command one by one in your terminal :-
+        ```
+        git clone https://github.com/Narayan-Chowdhary/indigohack-flightstatus.git 
+        git checkout indigohack-frontend
+        git pull origin indigohack-frontend
+        npm install 
+        ```
+* To start server run Command   
+    ```
+    npm start
+    ```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Authors
 
-### Analyzing the Bundle Size
+    Narayan Chowdhary
+    narayan97.nk@gmail.com
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
