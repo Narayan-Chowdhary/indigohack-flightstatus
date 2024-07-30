@@ -62,7 +62,7 @@ This project aims to develop a system that provides real-time flight status upda
     RECIEVER_EMAIL="Email address to receive notifications"
     ```
 
-3. To start the server, run the following commands:
+3. To Seed mock data and to start the server, run the following commands:
     ```bash
     npm run seed
     npm run dev
