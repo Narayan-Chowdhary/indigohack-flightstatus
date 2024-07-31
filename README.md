@@ -53,7 +53,7 @@ This project aims to develop a system that provides real-time flight status upda
        npm install 
        ```
 
-2. Create a `.env` file and add credentials:
+2. Create a `.env` file and add credentials Also you can check .env.example file in backend branch:
     ```plaintext
     MONGODB_URI="Your MongoDB URI"
     PORT=5050 # or any port of your choice
