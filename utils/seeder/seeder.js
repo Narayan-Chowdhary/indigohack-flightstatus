@@ -108,7 +108,7 @@ const flightData = [
 const insertData = async () => {
   try {
     console.log("here is uri", uri)
-    await mongoose.connect(uri);
+    await mongoose.connect("mongodb://mongodb.hackuser41.svc.cluster.local");
     await Flight.insertMany(flightData);
     mongoose.disconnect()
   } catch (error) {
