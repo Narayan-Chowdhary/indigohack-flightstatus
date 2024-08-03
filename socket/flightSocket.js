@@ -14,6 +14,7 @@ const flightSocket = (io) => {
     const emitFlightUpdates = async () => {
       try {
         const flights = await Flight.find();
+        console.log("files", flights)
         let filteredFlights;
         let newFlight  = null;
         if (filter === 'All Flights') {
